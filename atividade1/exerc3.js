@@ -1,15 +1,17 @@
-function calcularFatorial() {
-    let numero = prompt("Digite um número inteiro positivo:");
+let x = prompt("Digite um número inteiro positivo:", "");
+x = Number(x);
 
-    if (!isNaN(numero) && numero > 0) {
-        let fatorial = 1;
-        // Calcula o fatorial do número
-        for (let i = 1; i <= numero; i++) {
-            fatorial *= i;
-        }
-
-        alert("O fatorial de " + numero + " é " + fatorial);
-    } else {
-        alert("Por favor, digite um número inteiro positivo válido.");
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
     }
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
 }
+
+let result = factorial(x);
+
+alert("O fatorial de " + x + " é " + result + ".");

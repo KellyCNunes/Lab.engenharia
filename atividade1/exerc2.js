@@ -1,18 +1,19 @@
-let numero = prompt("Digite um número inteiro primo:");
-let contador = 0;
+let x = Number(prompt("Digite um número inteiro positivo:", ""));
+let isPrime = true;
 
-if (!isNaN(numero) && numero > 0) {
-    // Verifica se o número é primo
-    for (i=1; i< numero; i++){
-        if (numero % i === 0) {
-            contador++;      
-        }
-    } if (contador < 2){
-        alert("O número " + numero + " é primo.");
+if (x < 2) {
+  isPrime = false;
+} else {
+  for (let i = 2; i < x; i++) {
+    if (x % i === 0) {
+      isPrime = false;
+      break;
     }
-    else{ alert("O número " + numero + " não é primo.")}
+  }
 }
-    
- else {
-    alert("Por favor, digite um número inteiro positivo válido.");
+
+if (isPrime) {
+  alert(x + " é um número primo!");
+} else {
+  alert(x + " não é um número primo!");
 }
