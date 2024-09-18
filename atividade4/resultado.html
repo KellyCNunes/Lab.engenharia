@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Cadastrados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dados Cadastrados</h1>
+    <div class="dados-cadastrados">
+        <p><strong>Nome:</strong> <span id="nomeResultado"></span></p>
+        <p><strong>Email:</strong> <span id="emailResultado"></span></p>
+        <p><strong>Data de Nascimento:</strong> <span id="dataNascimentoResultado"></span></p>
+        <p><strong>Telefone Fixo:</strong> <span id="telefoneFixoResultado"></span></p>
+        <p><strong>Telefone Celular:</strong> <span id="telefoneCelularResultado"></span></p>
+        <p><strong>Perfil:</strong> <span id="perfilResultado"></span></p>
+        <p id="areaAtuacaoGroupResultado"><strong>Área de Atuação:</strong> <span id="areaAtuacaoResultado"></span></p>
+        <p id="matriculaGroupResultado"><strong>Matrícula:</strong> <span id="matriculaResultado"></span></p>
+    </div>
+
+    <script>
+        // Carregar os dados do localStorage
+        document.getElementById('nomeResultado').textContent = localStorage.getItem('nome');
+        document.getElementById('emailResultado').textContent = localStorage.getItem('email');
+        document.getElementById('dataNascimentoResultado').textContent = localStorage.getItem('dataNascimento');
+        document.getElementById('telefoneFixoResultado').textContent = localStorage.getItem('telefoneFixo');
+        document.getElementById('telefoneCelularResultado').textContent = localStorage.getItem('telefoneCelular');
+        document.getElementById('perfilResultado').textContent = localStorage.getItem('perfil');
+
+        if (localStorage.getItem('perfil') === 'professor') {
+            document.getElementById('areaAtuacaoResultado').textContent = localStorage.getItem('areaAtuacao');
+            document.getElementById('matriculaResultado').textContent = localStorage.getItem('matricula');
+        } else {
+            document.getElementById('areaAtuacaoGroupResultado').style.display = 'none';
+            document.getElementById('matriculaResultado').textContent = localStorage.getItem('matricula');
+        }
+    </script>
+</body>
+</html>
