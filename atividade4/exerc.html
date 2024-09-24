@@ -9,55 +9,55 @@
 <body>
     <h1>Formulário de Cadastro</h1>
     <form id="cadastroForm">
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome completo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" />
+        <span class="error" id="nomeError"></span>
+      
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+        <span class="error" id="emailError"></span>
+      
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="text" id="dataNascimento" name="dataNascimento" />
+        <span class="error" id="dataNascimentoError"></span>
+      
+        <label for="telefoneFixo">Telefone Fixo:</label>
+        <input type="text" id="telefoneFixo" name="telefoneFixo" />
+        <span class="error" id="telefoneFixoError"></span>
+      
+        <label for="telefoneCelular">Telefone Celular:</label>
+        <input type="text" id="telefoneCelular" name="telefoneCelular" />
+        <span class="error" id="telefoneCelularError"></span>
+      
+        <div>
+          <input type="radio" id="professor" name="perfil" value="professor" /> Professor
+          <input type="radio" id="aluno" name="perfil" value="aluno" /> Aluno
         </div>
-        
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="Digite seu email">
-            <span class="error" id="emailError"></span>
+      
+        <div id="alunoFields" style="display:none;">
+          <label for="matricula">Matrícula (Aluno):</label>
+          <input type="text" id="matricula" name="matricula" />
+          <span class="error" id="matriculaError"></span>
         </div>
-
-        <div class="form-group">
-            <label for="dataNascimento">Data de Nascimento:</label>
-            <input type="text" id="dataNascimento" placeholder="dd/mm/aaaa">
+      
+        <div id="professorFields" style="display:none;">
+          <label for="areaAtuacao">Área de Atuação (Professor):</label>
+          <input type="text" id="areaAtuacao" name="areaAtuacao" />
+          <span class="error" id="areaAtuacaoError"></span>
+      
+          <label for="profMatricula">Matrícula (Professor):</label>
+          <input type="text" id="profMatricula" name="profMatricula" />
+          <span class="error" id="profMatriculaError"></span>
         </div>
-
-        <div class="form-group">
-            <label for="telefoneFixo">Telefone Fixo:</label>
-            <input type="text" id="telefoneFixo" placeholder="(99)9999-9999">
-        </div>
-
-        <div class="form-group">
-            <label for="telefoneCelular">Telefone Celular:</label>
-            <input type="text" id="telefoneCelular" placeholder="(99)99999-9999">
-        </div>
-
-        <div class="form-group">
-            <label>Perfil:</label>
-            <div class="radio-group">
-                <label><input type="radio" name="perfil" value="aluno" checked> Aluno</label>
-                <label><input type="radio" name="perfil" value="professor"> Professor</label>
-            </div>
-        </div>
-
-        <div class="form-group" id="areaAtuacaoGroup">
-            <label for="areaAtuacao">Área de Atuação:</label>
-            <input type="text" id="areaAtuacao" placeholder="Digite sua área de atuação">
-        </div>
-
-        <div class="form-group" id="matriculaGroup">
-            <label for="matricula">Matrícula:</label>
-            <input type="text" id="matricula" placeholder="Digite sua matrícula">
-        </div>
+      
 
         <div class="form-group">
             <button type="submit">Enviar</button>
             <button type="reset">Redefinir</button>
         </div>
-    </form>
+    
+      </form>
+    
 
     <script src="exerc.js"></script>
 </body>

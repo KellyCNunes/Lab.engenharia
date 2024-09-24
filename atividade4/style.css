@@ -1,68 +1,101 @@
+/* Definições globais */
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: Arial, sans-serif; /* Fonte tradicional para o corpo */
+    background-color: #f0f8ff; /* Cor azul clara de fundo, lembrando o oceano */
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    flex-direction: column; /* Título e formulário alinhados verticalmente */
 }
 
-h1 {
-    font-size: 26px;
-    color: #000;
-    text-align: center;
-    margin-top: 20px;
-}
-
+/* Estilização do formulário */
 form {
-    background-color: #fff;
-    padding: 20px;
+    background-color: white;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 500px; /* Largura do formulário */
+    box-sizing: border-box;
+    margin-top: 20px; /* Espaçamento do formulário em relação ao título */
 }
 
+/* Estilo do título */
+h1 {
+    font-family: 'Poppins', sans-serif; /* Fonte bonita e moderna para o título */
+    color: #004d80; /* Azul escuro */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Estilo para os rótulos e inputs */
 label {
-    font-size: 14px;
-    color: #222;
+    font-size: 1.1em;
+    color: #004d80; /* Azul escuro para os textos */
     display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    font-size: 14px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
-    width: 100%;
     margin-bottom: 10px;
 }
 
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #e6f2ff; /* Azul muito claro no input */
+    box-sizing: border-box;
+}
+
+/* Estilo para os campos de erro */
 .error {
     color: red;
-    font-size: 10px;
+    font-size: 0.9em;
 }
 
-button {
-    font-size: 14px;
-    padding: 10px;
-    background-color: #eee;
-    border: 1px solid #aaa;
-    border-radius: 4px;
+/* Estilo para os campos de perfil (radio buttons) */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="radio"] + label {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Estilo dos botões */
+button[type="submit"], button[type="reset"] {
+    background-color: #0073e6; /* Azul mais forte para o botão */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: 1.2em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espaçamento entre botões e campos */
 }
 
-.form-group {
-    margin-bottom: 15px;
+button[type="submit"]:hover, button[type="reset"]:hover {
+    background-color: #005bb5; /* Azul mais escuro no hover */
 }
 
-.radio-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+/* Ajustes de layout para dispositivos móveis */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button[type="submit"], button[type="reset"] {
+        font-size: 1em;
+    }
 }
