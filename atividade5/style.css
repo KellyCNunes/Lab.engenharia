@@ -1,0 +1,126 @@
+/* Estilização Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilização do Título */
+h1 {
+    font-family: 'Georgia', serif;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Estilização dos Inputs e Botão */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+
+input {
+    width: 565px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+button#adicionarTarefaBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#adicionarTarefaBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilização das Tarefas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: green;
+}
+
+/* Estilização dos Botões */
+button.detalhes {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.detalhes:hover {
+    background-color: #002244;
+}
+
+button.concluir {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.concluir:hover {
+    background-color: #5a379c;
+}
+
+button.remover {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.remover:hover {
+    background-color: #c82333;
+}
