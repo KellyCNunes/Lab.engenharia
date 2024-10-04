@@ -1,4 +1,4 @@
-console.log('Script exer1_6.js foi carregado');
+console.log('Script exerc6.js foi carregado');
 
 
 const Letreiro = () => {
